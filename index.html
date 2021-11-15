@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>MyMediatek</title>
+        <link rel="stylesheet" href="./style/bootstrap.css">
+        <link rel="stylesheet" href="./style/custom.css"/>
+    </head>
+    <body>
+
+        <main>
+            <header>
+                <nav class="navbar navbar-light bg-light">
+                    <div class="container">
+                        <a class="navbar-brand">Mediatek - Wilt Lilian</a>
+                        <div>
+                                <button id="defaulttri" type="button" class="btn btn-warning mx-right">All</button>
+                                <button id="gametri" type="button" class="btn btn-warning mx-right">Game</button>
+                                <button id="movietri" type="button" class="btn btn-warning mx-right">Movie</button>
+                                <button id="albumtri" type="button" class="btn btn-warning mx-right">Album</button>
+                            </div>
+                            
+                            <button id="addMedia" type="button" class="btn btn-info mx-right">Add Media</button>
+                            
+
+                        </div>
+                  </nav>
+            </header>
+
+            <div id="list" class="wrapper">
+            </div>
+        </main>
+
+        <div id="modalEdit" class="modal fade d-block bg-opaque d-none">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Infos du média</h5>
+                        <button type="button" class="btn close">
+                            &times;
+                        </button>
+                    </div>
+                    <div id="editForm" class="modal-body">
+                        <div class="form-group mb-2">
+                            <label>Catégorie</label>
+                            
+                                <select name="categorie" id="categorie">
+                                    <option value="">----</option>
+                                    <option value="Album">Album</option>
+                                    <option value="Movie">Movie</option>
+                                    <option value="Game">Game</option>
+                                    
+                                </select>
+                        </div>
+                        <br>
+                        <div class="form-group mb-2">
+                            <h2 class="divider line one-line">General</h2>
+
+                            <label>Title</label><input type="text" name="Title" id="title"><br>
+                            <label>Release date</label><input type="date" name="date" id="date"><br>
+                            <label>Rating</label><input type="text" name="Rating" id="rating"><br>                        
+                            <label>Image</label><input type="url" name="Image" id="image"><br>
+                            <label>Description</label><input type="text" name="Desc" id="desc"><br>
+                        </div>
+                        <br>
+                        <div class="form-group mb-2">
+                            <h2 class="divider line one-line">Album Informations</h2>
+                                <label>Artists</label><input type="text" name="Artists" id="artists"><br>
+                                <label>Nb Tracks</label><input type="text" name="Tracks" id="nbtracks"><br>
+
+                        </div>
+                        <div class="form-group mb-2">
+                            <h2 class="divider line one-line">Movie Informations</h2>
+                                <label>Director</label><input type="text" name="Director" id="director"><br>
+                                <label>Actors</label><input type="text" name="Actors" id="actors"><br>
+                                <label>Duration</label><input type="text" name="Duration" id="duration"><br>
+                        </div>
+                        <div class="form-group mb-2">
+                            <h2 class="divider line one-line">Game Informations</h2>
+                                <label>Studio</label><input type="text" name="Studio" id="studio"><br>
+                                <label>Nb Players</label><input type="text" name="Players" id="nbplayers"><br>
+                                <label>Plot</label><input type="text" name="Plot" id="plot"><br>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary close" data-dismiss="modal">Close</button>
+                            <button id='confirmEdit' type="button" class="btn btn-primary">Confirm</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="src/main.js"></script>
+    </body>
+</html>

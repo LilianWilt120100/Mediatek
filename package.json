@@ -1,0 +1,14 @@
+{
+  "name": "mediatek",
+  "version": "0.0.0",
+  "description": "A simple Mediatek",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^2.4.0",
+    "serve": "^11.2.0"
+  }
+}
